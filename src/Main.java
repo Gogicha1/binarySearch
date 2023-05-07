@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.Arrays;
 import java.util.Random;
 
 
@@ -7,8 +8,9 @@ public class Main {
 	public static void main(String[] args) {
 	
 		int [] arr = generateRandomArray(50);
+		bubbleSort(arr);
 		System.out.println("Generated Array:");
-		System.out.println(bubbleSort(arr));
+		System.out.println(Arrays.toString(arr));
 		for (int i = 0; i < arr.length; i++) System.out.print(arr[i]+" ");
 		System.out.println("\n");
 		Scanner scanner = new Scanner (System.in);
@@ -29,7 +31,7 @@ public class Main {
 	        return arr;
 	    }
 	 
-	 public static boolean bubbleSort(int[] array) {
+	 public static void bubbleSort(int[] array) {
 		    int n = array.length;
 		    for (int i = 0; i < n - 1; i++) {
 		        for (int j = 0; j < n - i - 1; j++) {
@@ -41,7 +43,7 @@ public class Main {
 		            }
 		        }
 		    }
-			return false;
+			
 		}
 	 
 	private static int binarySearch(int[] numbers, int numberToFind) {
